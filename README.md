@@ -99,7 +99,7 @@ elif last_action.lower() == "calculator":
 else:
     ...
 ```
-It is important to note that you should add the truncate_text function and the cache to the end of your function. The truncate_text will prevent eating up all of your tokens while the cache will prevent the model from having to recompute the same action over and over again. You do not have to change the truncate_text and cache lines, just make sure your final text is in a variable called `content`. Also try to make sure any errors are caught and returned as a string for the model to respond to.
+It is important to note that you should add the truncate_text function and the cache to the end of your elif statement. The truncate_text will prevent eating up all of your tokens while the cache will prevent the model from having to recompute the same action over and over again. You do not have to change the truncate_text and cache lines, just make sure your final text is in a variable called `content`. Also try to make sure any errors are caught and returned as a string for the model to respond to.
 
 # How to use assistant class
 - The assistant class is a wrapper around chat style openai models. It has support for short term memory, long term memory, knowledge retrieval, memory summarization, and more. In order to use the action loop, make sure you do not use short or long term memory. If you want to use long term memory, you need to set up a docker container for (Qdrant)[https://qdrant.tech/] (free).
