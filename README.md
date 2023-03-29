@@ -79,7 +79,7 @@ Don't forget to change this line to add the `Calculator` action:
 ```python
 Action: the action you want to take, must be one of [Web Search, Get Readable Content, Get Internal Links, Run Python Code, Ask ChatGPT, Calculator]
 ```
-When adding an action, you also need to make the code to handle the action. There is a cell that defines a function called `parse_action`. There is an if, elif, else statement that looks like this that you can add an elif to like this:
+When adding an action, you also need to make the code to handle the action. There is a cell that defines a function called `parse_action`. There is an if, elif, else statement that you can add an elif to like this:
 ```python
 if last_action.lower() == 'web search':
     ...
