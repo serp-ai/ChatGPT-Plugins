@@ -1,6 +1,6 @@
 import requests
 import urllib.parse
-from typing import Any
+from typing import Any, Optional
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
@@ -121,7 +121,7 @@ class WebSearch():
         """
         self.cache = {}
 
-    def search(self, keywords: Any, region: str = "us-en", safesearch: str = "Off", time: Any | None = 'y', max_results: Any | None = 20, page: int = 1, output: Any | None = None, download: bool = False, cache: bool = False) -> list:
+    def search(self, keywords: Any, region: str = "us-en", safesearch: str = "Off", time: Optional[Any] = 'y', max_results: Optional[Any] = 20, page: int = 1, output: Optional[Any] = None, download: bool = False, cache: bool = False) -> list:
         """
         Search
 
